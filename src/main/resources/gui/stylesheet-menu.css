@@ -1,0 +1,93 @@
+@font-face {
+   font-family: 'Minecraft';
+   src: url('Minecraft.ttf');
+}
+
+.root {
+   -fx-background-color: DarkSlateGray;
+   /*-fx-background-image: url("background.gif");*/
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: center;
+   -fx-font-size: 1.3em;
+   -fx-font-family: 'Minecraft';
+   -fx-border-width: 0;
+   -fx-position: relative;
+}
+
+.container {
+   -fx-top: 20%;
+   -fx-left: 20%;
+   -fx-position: absolute;
+   -fx-translate-x: -20%;
+   -fx-translate-y: -20%;
+}
+
+.label {
+   -fx-font-size: 1.3em;
+   -fx-font-family: 'Minecraft';
+   -fx-border-width: 0;
+   -fx-position: relative;
+   -fx-text-fill: lightgrey;
+   -fx-alignment: center;
+}
+
+.button {
+   -fx-font-size: 1em;
+   -fx-font-family: 'Minecraft';
+   -fx-width: 200px;
+   -fx-height: 70px;
+   -fx-background-color: #B0B55D;
+   -fx-border-width: 0;
+   -fx-position: relative;
+}
+
+.button:hover {
+   -fx-cursor: hand;
+   -fx-background-color: #cdd45b;
+}
+
+.button:pressed {
+   -fx-translate-y: 2px;
+   -fx-effect: dropshadow(three-pass-box, #a6ab5b, 1, 0, -1, 1),
+   dropshadow(three-pass-box, #a6ab5b, 1, 0, -1, -1),
+   dropshadow(three-pass-box, #a6ab5b, 1, 0, 1, 0);
+}
+
+.button-background {
+   -fx-background-color: black;
+   -fx-position: absolute;
+   -fx-left: -2.5%;
+   -fx-top: 0;
+   -fx-width: 105%;
+   -fx-height: 100%;
+}
+
+.button-background-before {
+   -fx-background-color: black;
+   -fx-position: absolute;
+   -fx-left: 0;
+   -fx-top: -5%;
+   -fx-width: 100%;
+   -fx-height: 113%;
+}
+
+.text-field, .password-field {
+   -fx-background-color: DarkSlateGray;
+   -fx-border-color: #B0B55D;
+   -fx-border-width: 2px;
+   -fx-border-radius: 5px;
+   -fx-padding: 5px;
+   -fx-text-fill: lightgrey;
+}
+
+.text-field:focused, .password-field:focused {
+   -fx-border-color: #cdd45b;
+   -fx-background-color: #3f5f5f;
+}
+
+.credits {
+   -fx-font-size: 1.5em;
+   -fx-text-fill: grey;
+   -fx-text-alignment: center;
+}

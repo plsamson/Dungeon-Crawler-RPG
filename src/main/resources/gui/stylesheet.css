@@ -1,0 +1,56 @@
+@font-face {
+   font-family: 'Minecraft';
+   src: url('Minecraft.ttf');
+}
+
+.button {
+   -fx-padding: 0;
+   -fx-background-color: rgb(200,0,0,0.3);
+   -fx-text-fill: white;
+   -fx-font-size: 16px;
+   -fx-font-family: 'Minecraft';
+}
+
+.label {
+   -fx-text-fill: white;
+   -fx-font-size: 16px;
+   -fx-font-family: 'Minecraft';
+}
+
+.pane-player {
+   -fx-background-color: #2f4f4f;
+   -fx-border-color: black;
+   -fx-border-width: 5px 5px 5px 15px;
+}
+
+.pane-enemy {
+   -fx-background-color: #2f4f4f;
+   -fx-border-color: black;
+   -fx-border-width: 5px 15px 5px 5px;
+}
+
+.pane-spells {
+   -fx-background-color: #395f5f;
+   -fx-border-color: black;
+   -fx-border-width: 5px;
+}
+
+.labelplayer {
+   -fx-text-fill: lightgrey;
+   -fx-font-size: 18px;
+   -fx-font-family: 'Minecraft';
+}
+
+.labelenemy {
+   -fx-text-fill: lightgrey;
+   -fx-font-size: 18px;
+   -fx-font-family: 'Minecraft';
+   -fx-text-alignment: left;
+}
+
+.labelright {
+   -fx-text-fill: white;
+   -fx-font-size: 16px;
+   -fx-font-family: 'Minecraft';
+   -fx-text-alignment: left;
+}

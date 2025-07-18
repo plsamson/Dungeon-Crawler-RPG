@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="mainMenu_Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="1229.0" stylesheets="@stylesheet-menu.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.gui.UiController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="520.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sprites/logo.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="login_Pane" prefHeight="646.0" prefWidth="1229.0">
+         <children>
+            <TextField fx:id="login_Username" layoutX="510.0" layoutY="276.0" prefHeight="33.0" prefWidth="208.0" />
+            <PasswordField fx:id="login_Password" layoutX="511.0" layoutY="370.0" prefHeight="33.0" prefWidth="208.0" />
+            <Button fx:id="login_LoginButton" layoutX="514.0" layoutY="455.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="91.0" text="Login" />
+            <Button fx:id="login_RegisterButton" layoutX="628.0" layoutY="455.0" mnemonicParsing="false" onAction="#showRegisterPanel" text="Register" />
+            <Label fx:id="login_Invalid" layoutY="519.0" prefHeight="21.0" prefWidth="1229.0" text="invalid username/password" visible="false" />
+            <Label layoutX="571.0" layoutY="248.0" text="Username" />
+            <Label layoutX="574.0" layoutY="342.0" text="Password" />
+         </children>
+      </Pane>
+      <Pane fx:id="register_Pane" prefHeight="646.0" prefWidth="1229.0" visible="false">
+         <children>
+            <TextField fx:id="register_Username" layoutX="510.0" layoutY="276.0" prefHeight="33.0" prefWidth="208.0" />
+            <TextField fx:id="register_Password" layoutX="511.0" layoutY="370.0" prefHeight="33.0" prefWidth="208.0" />
+            <Button fx:id="register_RegisterButton" layoutX="514.0" layoutY="455.0" mnemonicParsing="false" onAction="#register" prefHeight="33.0" prefWidth="91.0" text="Register" />
+            <Button fx:id="register_CancelButton" layoutX="628.0" layoutY="455.0" mnemonicParsing="false" onAction="#showLoginPanel" prefHeight="33.0" prefWidth="91.0" text="Cancel" />
+            <Label layoutX="571.0" layoutY="248.0" text="Username" />
+            <Label fx:id="register_Invalid" layoutX="-1.0" layoutY="522.0" prefHeight="21.0" prefWidth="1229.0" text="username already taken" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Label layoutX="574.0" layoutY="342.0" text="Password" />
+         </children>
+      </Pane>
+      <Pane fx:id="newLoad_Pane" prefHeight="646.0" prefWidth="1229.0" visible="false">
+         <children>
+            <Button fx:id="newLoad_NewButton" layoutX="545.0" layoutY="287.0" mnemonicParsing="false" onAction="#showCreatePanel" prefHeight="39.0" prefWidth="140.0" text="New Game" />
+            <Button fx:id="newLoad_LoadButton" layoutX="545.0" layoutY="370.0" mnemonicParsing="false" onAction="#showLoadPanel" prefHeight="39.0" prefWidth="140.0" text="Load Game" />
+            <Label layoutX="573.0" layoutY="217.0" text="Main menu" />
+            <Button layoutX="545.0" layoutY="453.0" mnemonicParsing="false" onAction="#showCreditsPanel" prefHeight="39.0" prefWidth="140.0" text="Credits" />
+         </children>
+      </Pane>
+      <Pane fx:id="load_Pane" prefHeight="646.0" prefWidth="1229.0" visible="false">
+         <children>
+            <ListView fx:id="load_GamesListView" layoutX="390.0" layoutY="255.0" prefHeight="200.0" prefWidth="442.0" />
+            <Button fx:id="load_LoadButton" layoutX="509.0" layoutY="496.0" mnemonicParsing="false" onAction="#load" text="Load" />
+            <Button fx:id="load_CancelButton" layoutX="670.0" layoutY="496.0" mnemonicParsing="false" onAction="#showCreateLoadPanel" text="Back" />
+            <Label layoutX="397.0" layoutY="229.0" prefHeight="17.0" prefWidth="442.0" text="Game # - Level - Character Name" />
+         </children>
+      </Pane>
+      <Pane fx:id="create_Pane" prefHeight="646.0" prefWidth="1229.0" visible="false">
+         <children>
+            <TextField fx:id="create_Name" layoutX="545.0" layoutY="270.0" />
+            <Label fx:id="create_RemainingPts" layoutX="791.0" layoutY="444.0" text="Remaining Points: 10" />
+            <Label fx:id="create_WindPts" layoutX="825.0" layoutY="257.0" text="Wind: 0" />
+            <Label fx:id="create_WaterPts" layoutX="825.0" layoutY="302.0" text="Water: 0" />
+            <Label fx:id="create_EarthPts" layoutX="825.0" layoutY="347.0" text="Earth: 0" />
+            <Label fx:id="create_FirePts" layoutX="831.0" layoutY="393.0" text="Fire: 0" />
+            <Button fx:id="create_WindRemove" layoutX="775.0" layoutY="253.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="create_WaterRemove" layoutX="775.0" layoutY="307.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="create_EarthRemove" layoutX="782.0" layoutY="352.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="create_FireRemove" layoutX="782.0" layoutY="389.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="create_WindAdd" layoutX="905.0" layoutY="253.0" mnemonicParsing="false" text="+" />
+            <Button fx:id="create_WaterAdd" layoutX="905.0" layoutY="298.0" mnemonicParsing="false" text="+" />
+            <Button fx:id="create_EarthAdd" layoutX="905.0" layoutY="352.0" mnemonicParsing="false" text="+" />
+            <Button fx:id="create_FireAdd" layoutX="894.0" layoutY="389.0" mnemonicParsing="false" text="+" />
+            <ImageView fx:id="create_Skin" fitHeight="168.0" fitWidth="136.0" layoutX="299.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sprites/characteristics/pa.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="create_SkinBack" layoutX="246.0" layoutY="295.0" mnemonicParsing="false" text="&lt;" />
+            <Button fx:id="create_SkinNext" layoutX="463.0" layoutY="295.0" mnemonicParsing="false" text="&gt;" />
+            <Label layoutX="305.0" layoutY="212.0" text="Character Appearance" />
+            <Label layoutX="806.0" layoutY="204.0" text="Character Stats" />
+            <Button fx:id="create_Back" layoutX="689.0" layoutY="553.0" mnemonicParsing="false" onAction="#showCreateLoadPanel" text="Back" />
+            <Button fx:id="create_StartGame" layoutX="512.0" layoutY="553.0" mnemonicParsing="false" onAction="#create" text="Start new game" />
+            <ComboBox fx:id="create_Weapon" layoutX="292.0" layoutY="432.0" prefWidth="150.0" promptText="Weapon" />
+            <Label fx:id="create_Invalid" layoutX="585.0" layoutY="484.0" text="Invalid fields" visible="false" />
+            <Label layoutX="559.0" layoutY="249.0" text="Character Name" />
+         </children>
+      </Pane>
+      <Pane fx:id="credits_Pane" prefHeight="646.0" prefWidth="1229.0" visible="false">
+         <children>
+            <Text fill="#bfbcbc" layoutX="451.0" layoutY="261.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="credits" text="Pierre-Louis Samson&#10;Thibaud Guena&#10;Edoh Edmond Awoussi&#10;&#10;Université du Québec&#10;Projet d'analyse et de modélisation&#10;&#10;11 août 2024" />
+            <Button layoutX="582.0" layoutY="491.0" mnemonicParsing="false" onAction="#showCreateLoadPanel" text="Back" />
+         </children>
+      </Pane>
+      <Button fx:id="aragorn" layoutX="60.0" layoutY="576.0" mnemonicParsing="false" onAction="#aragorn" text="Jouer Aragorn" visible="false" />
+   </children>
+</Pane>

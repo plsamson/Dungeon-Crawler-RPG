@@ -1,0 +1,59 @@
+@font-face {
+   font-family: 'Minecraft';
+   src: url('Minecraft.ttf');
+}
+
+.button {
+   -fx-border-width: 1px;
+   -fx-background-color: transparent;
+   -fx-text-fill: transparent;
+   -fx-font-size: 10px;
+   -fx-font-family: 'Minecraft';
+}
+
+.label {
+   -fx-text-fill: green;
+   -fx-font-size: 16px;
+   -fx-font-family: 'Minecraft';
+}
+
+.pane {
+   -fx-background-color: grey;
+   -fx-border-color: black;
+   -fx-border-width: 5px;
+}
+
+/* General border style */
+.border-1 {
+   -fx-border-width: 1px;
+   -fx-border-style: solid;
+}
+
+/* Border styles for specific sides */
+.border-top {
+   -fx-border-width: 1px 0 0 0;
+}
+
+.border-right {
+   -fx-border-width: 0 1px 0 0;
+}
+
+.border-bottom {
+   -fx-border-width: 0 0 1px 0;
+}
+
+.border-left {
+   -fx-border-width: 0 0 0 1px;
+}
+
+/* Border style for the edges of the grid */
+.grid-edge {
+   -fx-border-width: 1px;
+   -fx-border-style: solid;
+}
+
+.pane-main {
+   -fx-background-color: rgb(49,129,54);
+   -fx-border-color: black;
+   -fx-border-width: 5px 15px 0 15px;
+}
