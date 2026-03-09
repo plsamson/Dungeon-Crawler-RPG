@@ -4,24 +4,21 @@
 
 # Dungeon Crawler RPG
 
-**Dungeon Crawler RPG** is a Java-based 2D dungeon crawler inspired by classic **Dungeon Crawl** roguelikes and the tactical, turn-based combat of **Dofus**.
+**Dungeon Crawler RPG** is a Java-based 2D dungeon crawler inspired by classic Dungeon Crawl roguelikes and the tactical, turn-based combat of Dofus.
 
 ---
 
-## 🎮 Features
+## Features
 
 - **Tile-based 2D dungeon** exploration on a grid
-- **Turn-based combat** with enemy AI using A* for efficient tile-based pathfinding
+- **Turn-based combat** with enemy AI using A* algorithm for efficient tile-based pathfinding
 - **Multiple spells and attack types** with elemental affinities (fire, water, earth, air, etc.)
 - **Procedurally scaling levels**: enemy difficulty increases indefinitely after each level
 - **Account creation & login** system for saving and loading player profiles
-- **Modular game logic**: Controller uses package `mecanique` (services) to manage models.
-- **JavaFX-based GUI** initialized via `UIInitializer` and user input handled by `UIController`
-- **JUnit tests** for core mechanics
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 - **Java JDK 21** or newer
 - **Maven 3.6+**
@@ -31,16 +28,21 @@
 
 ---
 
-## 🚀 Installation & Running
+## Installation & Running
 
-1. **Clone the repository**
-
-   `git clone https://github.com/plsamson/dungeon_crawler_rpg.git`
-
-2. **Build the project**
+1. **Build the project**
 
    `mvn clean package`
 
-3. **Run via Maven**
+
+2. **Run via Maven**
 
    `mvn javafx:run`
+
+---
+
+## Preview
+
+<p align="center">
+  <img src="preview.png" alt="Dungeon Crawler RPG"/>
+</p>
